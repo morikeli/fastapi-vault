@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fastAPI demo</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <div class="table-responsive">
+                    <table class="table table-sm table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Film name</th>
+                                <th>Director</th>
+                            </tr>
+                        </thead>
+                        <tbody id="table-body">
+                           {% include 'table.html' %}
+                        </tbody>
+                    </table>
+                    <button class="btn btn-outline-primary" hx-get="/index/" hx-target="#table-body" hx-swap="beforeend">Load more</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
